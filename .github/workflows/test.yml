@@ -11,4 +11,5 @@ jobs:
         nix_path: nixpkgs=channel:nixos-unstable
     - name : Python test
       run: python3 -m pip install Django
+    - run: pip install ipython
     - run: nix-shell --run 'make test-ci' --show-trace
