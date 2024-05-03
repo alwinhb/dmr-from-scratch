@@ -14,6 +14,5 @@ jobs:
             python3 -m pip install Django
             sudo apt install software-properties-common && sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt update && sudo apt install python3.7
             ls /usr/bin/python*
-            unlink python && ln -s /usr/bin/python3.7 python
-            python --version
+            python3 --version
     - run: nix-shell --run 'make test-ci' --show-trace
