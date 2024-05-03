@@ -12,6 +12,6 @@ jobs:
     - name : Python test
       run: |
             python3 -m pip install Django
-            apt install software-properties-common && add-apt-repository ppa:deadsnakes/ppa && apt update && apt install python3.7
-            update-alternatives --install /usr/bin/python python /usr/bin/python3.7*
+            sudo apt install software-properties-common && sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt update && sudo apt install python3.7
+            sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7*
     - run: nix-shell --run 'make test-ci' --show-trace
